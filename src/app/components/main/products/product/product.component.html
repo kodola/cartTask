@@ -1,0 +1,27 @@
+<div class="card-small">
+    <img [src]="productItem?.imageUrl"
+         class="bd-placeholder-img"
+         width="100%">
+
+    <div class="card-field">
+        <p>{{productItem?.name}}</p>
+        <div class="d-flex justify-content-end align-items-center btns">
+            <button type="button"
+                    class="btn-discount" disabled
+                    *ngIf="productItem?.discount != 0">-{{ productItem?.discount }}%</button>
+            <div class="btn-group">
+                <ng-container *ngIf="!productItem?.isOwned">
+                    <button *ngIf="!isAdded"
+                            type="button"
+                            (click)="addToCart()"
+                            class="btn-price">{{ productItem?.price | currency:"USD":"symbol" }}</button>
+                    <button *ngIf="isAdded"
+                            type="button" class="btn-cart" disabled>
+                        in cart
+                    </button>
+                </ng-container>
+                <button type="button" class="btn-owned" *ngIf="productItem?.isOwned" disabled>owned</button>
+            </div>
+        </div>
+    </div>
+</div>

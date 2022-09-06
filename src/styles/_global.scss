@@ -1,0 +1,29 @@
+$side-margin: 1em;
+
+* {
+    list-style: none;
+    font-family: 'SourceSansPro';
+    text-transform: uppercase;
+}
+
+@font-face {
+    font-family: SourceSansPro;
+    src: url("../assets/fonts/SourceSansPro-Regular.otf") format("opentype");
+}
+
+.row {
+    margin-left: $side-margin;
+    margin-right: $side-margin;
+}
+
+button {
+    text-transform: uppercase;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+ul {
+    padding-left: 0
+}

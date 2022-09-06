@@ -1,0 +1,22 @@
+<div *ngIf="showCartContent">
+    <div *ngIf="cartItems.length === 0"
+         class="cart-empty">
+        No items added
+    </div>
+    <ul *ngIf="cartItems.length > 0"
+        class="cart-products">
+        <div class="cart-top-section">
+            <p class="cart-items">{{ cartItems.length }} item{{cartItems.length > 1 ? 's' : ''}} in cart</p>
+            <div>
+                <span class="cart-price">{{ cartTotal | currency:"USD":"symbol" }}</span>
+                <button type="button" class="btn-clear" (click)="clearCart()">Clear cart</button>
+            </div>
+        </div>
+        <li class="list-group-item"
+            *ngFor="let item of cartItems">
+            <app-cart-item [cartItem]="item"
+                           (item)="removeCurrentProduct($event)">
+            </app-cart-item>
+        </li>
+    </ul>
+</div>

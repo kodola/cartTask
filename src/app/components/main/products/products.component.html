@@ -1,0 +1,7 @@
+<div class="container">
+    <ul class="row">
+        <li *ngFor="let product of products" class="col">
+            <app-product [productItem]="product"></app-product>
+        </li>
+    </ul>
+</div>

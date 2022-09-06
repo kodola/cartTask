@@ -1,0 +1,28 @@
+h6 {
+    color:rgba(38, 38, 38, 1);
+    font-size: 15px;
+    font-weight: 900;
+    margin-top: 2em;
+    letter-spacing: 0.3px;
+}
+
+img {
+    margin-top: 0.7em;
+}
+
+button {
+    background: url("../../../../assets/images/SECRETBUTTON.png");
+    width: 392px;
+    height: 43px;
+    position: absolute;
+    left: 340px;
+    top: 177px;
+    // secret is secret
+    display: none;
+}
+
+ul {
+    div {
+        position: relative
+    }
+}

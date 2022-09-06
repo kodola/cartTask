@@ -1,0 +1,12 @@
+<p class="cart-item-border"></p>
+<div class="cart-item" (mouseenter)="visible = true" (mouseleave)="visible = false">
+    <div class="cart-item-left">
+        <img [src]="cartItem.productImage"
+             class="cart-item-img">
+        <div>
+            <span class="cart-item-name">{{ cartItem.productName | slice:0:20 }}{{ cartItem.productName.length > 20 ? '...' : '' }}</span>
+            <button *ngIf="visible" type="button" class="btn-remove" (click)="remove(cartItem)">remove</button>
+        </div>
+    </div>
+    <p class="cart-item-price">{{ cartItem.price | currency:"USD":"symbol" }}</p>
+</div>

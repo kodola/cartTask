@@ -1,0 +1,23 @@
+<div class="navbar navbar-style">
+    <div class="container">
+        <a href="#"
+           class="navbar-brand d-flex align-items-center">
+            <img src="assets/images/Logo.png"
+                 width="43"
+                 height="37"
+                 title="Logo"
+                 alt="Home" />
+        </a>
+        <button type="button"
+                class="nav-button"
+                (click)="openCart()">
+            <img src="assets/icons/Cart.svg"
+                 width="16"
+                 height="15"
+                 title="Cart"
+                 alt="Cart" />
+        </button>
+    </div>
+    <app-cart [showCartContent]="showCart"
+              [ngClass]="showCart ? 'overlay' : ''"></app-cart>
+</div>

@@ -1,0 +1,72 @@
+.card-small {
+    background-color: rgba(224, 224, 224, 1)
+}
+
+.card-field {
+    margin-left: 0.75em;
+    margin-right: 0.3em;
+    margin-top: 0.6em;
+    padding-bottom: 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 4.1em;
+}
+
+p {
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 0.2px;
+}
+
+.btns {
+    padding-top: 0.1em;
+}
+
+.btn-price, .btn-cart{
+    color: rgba(64, 64, 64, 1);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 15px;
+    letter-spacing: 0.7px;
+    background: #E0E0E0;
+    border: 1px solid #979797;
+    box-shadow: 0px 1px 1px rgba(198, 198, 198, 0.5);
+    border-radius: 2px;
+    padding: 0.2em 0.4em;
+}
+
+.btn-discount {
+    color: rgba(242, 242, 242, 1);
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 0.7px;
+    background: #00905E;
+    border: 0;
+    box-shadow: 0px 1px 1px rgba(198, 198, 198, 0.5);
+    border-radius: 2px;
+    padding: 0.25em 0.45em;
+    margin-right: 0.5em;
+}
+
+.btn-owned {
+    color: rgba(64, 64, 64, 1);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0.7px;
+    background: #E0E0E0;
+    border: 1px solid #979797;
+    box-shadow: 0px 1px 1px rgba(198, 198, 198, 0.5);
+    border-radius: 2px;
+    padding: 0.2em 0.4em;
+}
+
+button:disabled,
+button[disabled]{
+    &.btn-owned {
+        opacity: 0.5;
+    }
+}
